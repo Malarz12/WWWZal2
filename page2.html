@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Sandomierskie Atrakcje</title>
+</head>
+<body class="bg-gray-100 p-4">
+
+<h1 class="text-2xl mb-4 text-center text-sky-500">
+    Sandomierskie Atrakcje
+    <span class="inline-block animate-ping w-3 h-3 bg-green-500 rounded-full ml-2"></span>
+</h1>
+
+<table class="table-auto border-collapse border border-gray-400 w-full mb-8">
+    <thead>
+    <tr class="bg-sky-500 text-white">
+        <th class="px-4 py-2 border border-gray-400">Lp</th>
+        <th class="px-4 py-2 border border-gray-400">Nazwa</th>
+        <th class="px-4 py-2 border border-gray-400">Opis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="bg-green-200">
+        <td class="px-4 py-2 border border-gray-400">1</td>
+        <td class="px-4 py-2 border border-gray-400">Katedra Sandomierska</td>
+        <td class="px-4 py-2 border border-gray-400">Znany zabytek sakralny miasta.</td>
+    </tr>
+    <tr class="bg-violet-200">
+        <td class="px-4 py-2 border border-gray-400">2</td>
+        <td class="px-4 py-2 border border-gray-400">Historyczny Rynek</td>
+        <td class="px-4 py-2 border border-gray-400">Centralny plac spotkań i wydarzeń kulturalnych.</td>
+    </tr>
+    <tr class="bg-indigo-200">
+        <td class="px-4 py-2 border border-gray-400">3</td>
+        <td class="px-4 py-2 border border-gray-400">Podziemne Korytarze</td>
+        <td class="px-4 py-2 border border-gray-400">Tajemnicze tunele pełne legend.</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="flex justify-center">
+    <img id="slider" src="/img1.png" alt="Sandomierska atrakcja" class="border border-gray-400 max-w-lg">
+</div>
+
+<script>
+    const images = ["/img1.png", "/img2.png", "/img3.png"];
+    let currentIndex = 0;
+    const slider = document.getElementById("slider");
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        slider.src = images[currentIndex];
+    }
+    setInterval(changeImage, 5000);
+</script>
+
+</body>
+</html>
